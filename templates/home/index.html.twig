@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div class="mt-4 p-4 bg-primary text-bg-grey rounded">
+        <h1>Projet test d'enregistrement et d'authentification d'utilisateur</h1>
+        {% if app.user %}
+            <h2>Bienvenue {{app.user.pseudo}} !! </h2>
+        <p>votre mel pour ce compte est  : {{ app.user.email}}</p>
+        {% else %}
+            <h2>Bienvenue !!</h2>
+            <p>Pensez à vous connecter ou à vous enregistrer</p>
+
+        {% endif %}
+        
+        
+    </div>
+{% endblock %}
